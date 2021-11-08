@@ -1,6 +1,7 @@
 import { Button } from "@chakra-ui/button";
 import { Image } from "@chakra-ui/image";
-import { HStack, Link, Text, VStack } from "@chakra-ui/layout";
+import { HStack, Link, SimpleGrid, Text, VStack } from "@chakra-ui/layout";
+import { BlogPostCard } from "../src/components/BlogPostCard";
 
 export const PageHome = () => {
   return (
@@ -39,6 +40,60 @@ export const PageHome = () => {
           </HStack>
         </VStack>
       </HStack>
+
+      <VStack w="full" maxW="container.lg" align="flex-start">
+        <Text fontWeight="bold" fontSize="xl">
+          Pré-lançamento
+        </Text>
+
+        <SimpleGrid
+          w="full"
+          gridTemplateColumns="1fr 1fr 1fr"
+          gap="8"
+          align="start"
+          py="8"
+        >
+          <BlogPostCard />
+          <BlogPostCard />
+          <BlogPostCard />
+        </SimpleGrid>
+      </VStack>
+
+      <VStack w="full" maxW="container.lg" align="flex-start">
+        <Text fontWeight="bold" fontSize="xl">
+          Outras Notícias
+        </Text>
+
+        <SimpleGrid
+          w="full"
+          gridTemplateColumns="1fr 1fr 1fr"
+          gap="8"
+          align="start"
+          py="8"
+        >
+          <BlogPostCard />
+          <BlogPostCard />
+          <BlogPostCard />
+        </SimpleGrid>
+      </VStack>
+
+      <VStack w="full" maxW="container.lg" align="flex-start">
+        <Text fontWeight="bold" fontSize="xl">
+          Artigos
+        </Text>
+
+        <SimpleGrid
+          w="full"
+          gridTemplateColumns="1fr 1fr 1fr"
+          gap="8"
+          align="start"
+          py="8"
+        >
+          <BlogPostCard />
+          <BlogPostCard />
+          <BlogPostCard />
+        </SimpleGrid>
+      </VStack>
     </VStack>
   );
 };
